@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jokenpô</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="estilo.css"> 
+    </head>
+    <body>
+        <h3>Jogo Jokenpô</h3>
+        <hr>
+        <h4>Escolha número de rodadas</h4>
+        <div class="radio-escolha">
+            <input type="radio" name= "grupo" id="rodada3" onclick="escolherVezes()" checked>3 Vezes
+            <input type="radio" name= "grupo" id="rodada7" onclick="escolherVezes()">7 vezes
+            <input type="radio" name= "grupo" id="rodada10" onclick="escolherVezes()">10 Vezes
+        </div>
+        <hr>
+        <h4>Jogador</h4>
+        <ul id="jogador-escolha">
+            <li><a id="jogador-escolha-1" onclick="jogar(0)"><img  src="pedra.png"></a></li>
+            <li><a id="jogador-escolha-2" onclick="jogar(1)"><img  src="papel.png"></a></li>
+            <li><a id="jogador-escolha-3" onclick="jogar(2)"><img  src="tesoura.png"></a></li>
+        </ul>
+        <hr>
+        <p>
+            <input class="btn btn-secondary btn" type="reset" value= " Desistir " onclick="resetar()">
+        </p>
+        <hr>
+            <h4>Computador:</h4>
+            
+            <img src="pc.png" alt="PC" id="pc">
+        <hr>
+            <h4 id="placar">Jogador 0 X 0 Computador</h4>
+        <hr>
+            <h4>Histórico de seus resultados</h4>
+        <hr>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <table class="table table-bordered" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ganhador</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Placar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody> 
+                </table>
+                </div>
+            </div>
+        </div>
+        <p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>Insira no campo a linha do histórico que você deseja excluir</h5>
+                        <input type="text" id="campo">
+                        <input class="btn btn-secondary btn"  type="reset" value= " Excluir " onclick="removeLinha()">
+                    </div> 
+                </div>
+            </div>
+        </p>
+  
+        <script src="jokenpo.js"></script>    
+    </body>
+</html>
